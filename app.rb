@@ -80,7 +80,7 @@ class App
       parent_permission = gets.chomp.downcase
     end
 
-    @persons << Student.new(age, name: name, parent_permission: parent_permission == 'y')
+    @persons < Student.new(age, name: name, parent_permission: parent_permission == 'y')
     puts 'Student successfully created'
     line_return
   end
@@ -131,7 +131,7 @@ class App
   end
 
   def list_renters
-    @persons.each_with_index do |person, _index|
+    @persons.each do |person|
       puts "  ID: #{person.id} [#{person.type}] Name: #{person.name}"
     end
   end
