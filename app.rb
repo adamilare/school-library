@@ -80,7 +80,7 @@ class App
       parent_permission = gets.chomp.downcase
     end
 
-    @persons < Student.new(age, name: name, parent_permission: parent_permission == 'y')
+    @persons << Student.new(age, name: name, parent_permission: parent_permission == 'y')
     puts 'Student successfully created'
     line_return
   end
@@ -166,7 +166,7 @@ class App
   def list_rentals
     puts 'Select id of the person from the following: '
     list_renters
-    person_id = gets.chomp.to_i
+    person_id = gets.chomp.to_i + 1
     person = find_person(person_id)
     while person.nil?
       puts 'Person do not exist, please enter a valid id'
